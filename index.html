@@ -1,0 +1,85 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        
+       function add(a)
+    {
+        var num1=parseInt(document.getElementById("firstvalue").value);
+        var num2=parseInt(document.getElementById("secondvalue").value);
+        if(num1=="")
+        alert("no value in num1");
+        if(a==1)
+        {
+      
+        var r=num1+num2;
+        
+        }
+        else if(a==2)
+        {
+            if(num1>=num2)
+            {
+               var r=num1-num2;
+                document.getElementById("r").value=r;
+            }
+             else
+                 {
+                  alert("first value is less than second value");
+                 }
+
+            
+        }
+        else if(a==3)
+        {
+            var r=num1*num2;
+        }
+        else
+        {
+            var r=num1/num2;
+        }
+        document.getElementById("r").value=r;
+
+    }
+  
+
+    </script>
+    <style>
+        #f,#t{
+            color: blue;
+            width: 200px;
+            border: burlywood;
+            border-style: dotted;
+
+
+        }
+        #o
+        {
+            border-style: inset;
+        }
+    </style>
+</head>
+
+
+
+<body bgcolor="orange">
+
+    
+    
+    this is viswa<br>
+
+    <p>enter the values</p>
+
+   <p id="f" bgcolor="red">enter first value <input id="firstvalue" type="number"></p>
+   <p id="t">enter second value <input id="secondvalue" type="number"></p>
+   <p id="o">result: <input id="r"></input></p>  <br>    
+    
+<input type="button" value="add" onclick=add(1)>
+<input type="button" value=sub onclick=add(2)>
+<input type="button" value=mul onclick=add(3)>
+<input type="button" value=divide onclick=add(4)>
+
+
+</body>
+</html>
